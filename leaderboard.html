@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FitBook <span>Web</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header" style="text-align: center; border: none;">
+            <h2 class="page-title">🏆 Monthly Champions</h2>
+            <p>Top members based on attendance points</p>
+        </div>
+
+        <div class="podium">
+            <div class="podium-box rank-2">
+                <div class="podium-avatar"><i class="fas fa-user" style="color:#333; line-height:50px;"></i></div>
+                <h3>Mike</h3>
+                <p>28 Classes</p>
+                <h1>2</h1>
+            </div>
+            <div class="podium-box rank-1">
+                <div class="podium-avatar"><i class="fas fa-crown" style="color:gold; line-height:50px;"></i></div>
+                <h3>You</h3>
+                <p>32 Classes</p>
+                <h1>1</h1>
+            </div>
+            <div class="podium-box rank-3">
+                <div class="podium-avatar"><i class="fas fa-user" style="color:#333; line-height:50px;"></i></div>
+                <h3>Sarah</h3>
+                <p>25 Classes</p>
+                <h1>3</h1>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Member Name</th>
+                        <th>Classes Attended</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>4</td><td>Tanaka Aki</td><td>22</td><td>2200 pts</td></tr>
+                    <tr><td>5</td><td>John Doe</td><td>20</td><td>2000 pts</td></tr>
+                    <tr><td>6</td><td>Emily Clark</td><td>18</td><td>1800 pts</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

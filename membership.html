@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membership Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FitBook <span>Web</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="membership.html" class="active">Membership</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title" style="text-align:center;">Choose Your Plan</h2>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price-amount">$0</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> 2 Classes / Month</li>
+                    <li><i class="fas fa-check"></i> Basic App Access</li>
+                    <li><i class="fas fa-times" style="color:#ccc;"></i> No Pool Access</li>
+                </ul>
+                <button class="btn-primary" style="background:#ccc; color:#333;">Current Plan</button>
+            </div>
+
+            <div class="price-card" style="border: 2px solid var(--accent); transform: scale(1.05);">
+                <div style="background:var(--accent); color:white; padding:5px; border-radius:5px; margin-bottom:10px;">Most Popular</div>
+                <h3>Gold Member</h3>
+                <div class="price-amount">$49</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Unlimited Classes</li>
+                    <li><i class="fas fa-check"></i> Pool & Sauna Access</li>
+                    <li><i class="fas fa-check"></i> Free Diet Plan</li>
+                </ul>
+                <button class="btn-primary" onclick="showPayment()">Upgrade Now</button>
+            </div>
+
+            <div class="price-card">
+                <h3>Platinum</h3>
+                <div class="price-amount">$89</div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> All Gold Features</li>
+                    <li><i class="fas fa-check"></i> 1-on-1 Personal Trainer</li>
+                    <li><i class="fas fa-check"></i> Private Locker</li>
+                </ul>
+                <button class="btn-primary" onclick="showPayment()">Upgrade Now</button>
+            </div>
+        </div>
+
+        <div id="payment-modal" style="display:none; margin-top:50px; background:white; padding:30px; border-radius:10px; max-width:500px; margin-left:auto; margin-right:auto; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+            <h3 style="margin-bottom:20px;">Secure Checkout</h3>
+            <div style="margin-bottom:15px;">
+                <label style="display:block; margin-bottom:5px;">Card Number</label>
+                <input type="text" placeholder="1234 5678 9101 1121" style="width:100%; padding:10px; border:1px solid #ddd; border-radius:5px;">
+            </div>
+            <div style="display:flex; gap:10px; margin-bottom:20px;">
+                <input type="text" placeholder="MM/YY" style="flex:1; padding:10px; border:1px solid #ddd; border-radius:5px;">
+                <input type="text" placeholder="CVC" style="flex:1; padding:10px; border:1px solid #ddd; border-radius:5px;">
+            </div>
+            <button class="btn-primary" onclick="alert('Payment Successful! Welcome to Gold.')">Pay $49.00</button>
+        </div>
+
+    </div>
+
+    <script>
+        function showPayment() {
+            document.getElementById('payment-modal').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+</html>

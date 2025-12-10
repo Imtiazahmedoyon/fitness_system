@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FitBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FitBook <span>Web</span></div>
+        
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="membership.html">Membership</a></li>
+        </ul>
+
+        <div class="notification-btn" onclick="toggleNotif()">
+            <i class="fas fa-bell"></i>
+            <span class="badge-count">3</span>
+        </div>
+
+        <div class="notif-dropdown" id="notifBox">
+            <div class="notif-item">
+                <strong>Class Confirmed!</strong>
+                <p>Your spot for HIIT Cardio is confirmed.</p>
+                <small>10 mins ago</small>
+            </div>
+            <div class="notif-item">
+                <strong>Waitlist Update</strong>
+                <p>You moved to position #2 for Yoga.</p>
+                <small>2 hours ago</small>
+            </div>
+            <div class="notif-item">
+                <strong>System Maintenance</strong>
+                <p>App will be down on Friday night.</p>
+                <small>1 day ago</small>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="dashboard-grid">
+            
+            <div class="main-content">
+                
+                <div class="welcome-banner">
+                    <h2>Hello, Student! 👋</h2>
+                    <p>You have 2 upcoming classes this week. Keep up the good work!</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-check-circle" style="color:var(--accent); font-size:1.5rem; margin-bottom:10px;"></i>
+                        <span class="stat-number">12</span>
+                        <p>Classes Attended</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-fire" style="color:#e67e22; font-size:1.5rem; margin-bottom:10px;"></i>
+                        <span class="stat-number">2,400</span>
+                        <p>Calories Burned</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-crown" style="color:#f1c40f; font-size:1.5rem; margin-bottom:10px;"></i>
+                        <span class="stat-number">Rank #5</span>
+                        <p>Leaderboard</p>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Today's Schedule</h3>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Class Name</th>
+                                <th>Instructor</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:00 AM</td>
+                                <td><strong>Morning Yoga</strong></td>
+                                <td>Sarah Khan</td>
+                                <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                                <td><a href="pass.html" style="color:var(--accent); font-weight:bold;">View Pass</a></td>
+                            </tr>
+                            <tr>
+                                <td>05:00 PM</td>
+                                <td><strong>HIIT Cardio</strong></td>
+                                <td>Mike Ross</td>
+                                <td><span class="status-badge status-pending">Waitlist #2</span></td>
+                                <td><button style="border:none; background:none; color:red; cursor:pointer;">Cancel</button></td>
+                            </tr>
+                            <tr>
+                                <td>07:00 PM</td>
+                                <td><strong>Zumba Dance</strong></td>
+                                <td>Emily Blunt</td>
+                                <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                                <td><a href="pass.html" style="color:var(--accent); font-weight:bold;">View Pass</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+                
+                <div class="sidebar-widget profile-mini">
+                    <div class="avatar-circle"><i class="fas fa-user"></i></div>
+                    <h3>Rahim Uddin</h3>
+                    <p style="color:#666; font-size:0.9rem;">Member ID: 19101010</p>
+                    <span style="background:#f1c40f; color:black; padding:2px 8px; border-radius:10px; font-size:0.7rem; font-weight:bold;">GOLD MEMBER</span>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Monthly Goal</h4>
+                    <p style="font-size:0.9rem; color:#666; margin-top:5px;">12 / 15 Classes</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                    <p style="font-size:0.8rem; margin-top:10px; color:var(--accent);">You're almost there!</p>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Quick Links</h4>
+                    <ul style="margin-top:10px; list-style:none;">
+                        <li style="margin-bottom:10px;"><a href="booking.html" style="color:#333;"><i class="fas fa-calendar-plus" style="color:var(--accent);"></i> Book New Class</a></li>
+                        <li style="margin-bottom:10px;"><a href="history.html" style="color:#333;"><i class="fas fa-star" style="color:#f1c40f;"></i> Rate Instructors</a></li>
+                        <li><a href="membership.html" style="color:#333;"><i class="fas fa-credit-card" style="color:#e74c3c;"></i> Upgrade Plan</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleNotif() {
+            var box = document.getElementById('notifBox');
+            if (box.style.display === "block") {
+                box.style.display = "none";
+            } else {
+                box.style.display = "block";
+            }
+        }
+        
+        // Close notification if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.notification-btn') && !event.target.matches('.notification-btn *')) {
+                var box = document.getElementById('notifBox');
+                if (box && box.style.display === "block") {
+                    box.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

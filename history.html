@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History & Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">FitBook <span>Web</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+            <li><a href="history.html" class="active">History</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Past Classes & Reviews</h2>
+
+        <div class="review-box">
+            <div style="display:flex; justify-content:space-between;">
+                <h3>Morning Yoga</h3>
+                <small>Attended: Yesterday</small>
+            </div>
+            <p>Instr. Sarah Khan</p>
+            <div style="margin-top:10px;">
+                <span>Rate this class: </span>
+                <span class="star-rating">
+                    <i class="fas fa-star checked"></i>
+                    <i class="fas fa-star checked"></i>
+                    <i class="fas fa-star checked"></i>
+                    <i class="fas fa-star checked"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <span style="font-size:0.8rem; margin-left:10px; color:green;">Thanks for rating!</span>
+            </div>
+        </div>
+
+        <div class="review-box">
+            <div style="display:flex; justify-content:space-between;">
+                <h3>HIIT Cardio</h3>
+                <small>Attended: 3 days ago</small>
+            </div>
+            <p>Instr. Mike Ross</p>
+            <div style="margin-top:10px;" id="rate-area-2">
+                <span>Rate this class: </span>
+                <span class="star-rating" onclick="rateClass(2)">
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function rateClass(id) {
+            // Fake interaction
+            document.getElementById('rate-area-'+id).innerHTML = '<span style="color:var(--accent); font-weight:bold;">⭐⭐⭐⭐⭐ Submitted!</span>';
+        }
+    </script>
+</body>
+</html>

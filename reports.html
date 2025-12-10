@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analytics Reports - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>.admin-nav { background-color: #2c3e50; color: white; } .admin-nav .nav-links a { color: #ecf0f1; }</style>
+</head>
+<body>
+
+    <nav class="navbar admin-nav">
+        <div class="logo">FitBook <span>Admin</span></div>
+        <ul class="nav-links">
+            <li><a href="admin_dashboard.html">Overview</a></li>
+            <li><a href="manage_classes.html">Manage Classes</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="reports.html" class="active">Reports</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout" style="border-color:white; color:white;">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h2 class="page-title">Monthly Analytics</h2>
+            <button onclick="window.print()" style="background:#34495e; color:white; border:none; padding:8px 15px; cursor:pointer; border-radius:4px;"><i class="fas fa-print"></i> Print Report</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">$12,500</span>
+                <p>Total Revenue</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">85%</span>
+                <p>Avg. Attendance</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">45</span>
+                <p>New Signups</p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3 style="margin-bottom:20px;">Weekly Attendance Overview</h3>
+            
+            <div class="simple-chart">
+                <div class="bar-group">
+                    <div class="bar" style="height: 40%;"><span>40</span></div>
+                    <div class="label">Sun</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 70%;"><span>70</span></div>
+                    <div class="label">Mon</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 50%;"><span>50</span></div>
+                    <div class="label">Tue</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 90%; background:#2ecc71;"><span>90</span></div>
+                    <div class="label">Wed</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 60%;"><span>60</span></div>
+                    <div class="label">Thu</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 80%;"><span>80</span></div>
+                    <div class="label">Fri</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar" style="height: 30%; background:#e74c3c;"><span>30</span></div>
+                    <div class="label">Sat</div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">Most Popular Classes</h3>
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Class Name</th>
+                        <th>Total Bookings</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>HIIT Cardio</td>
+                        <td>450</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Morning Yoga</td>
+                        <td>320</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Zumba</td>
+                        <td>210</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

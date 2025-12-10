@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>.admin-nav { background-color: #2c3e50; color: white; } .admin-nav .nav-links a { color: #ecf0f1; }</style>
+</head>
+<body>
+
+    <nav class="navbar admin-nav">
+        <div class="logo">FitBook <span>Admin</span></div>
+        <ul class="nav-links">
+            <li><a href="admin_dashboard.html">Overview</a></li>
+            <li><a href="manage_classes.html">Manage Classes</a></li>
+            <li><a href="students.html" class="active">Students</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout" style="border-color:white; color:white;">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h2 class="page-title">Registered Students</h2>
+            <span style="color:#666;">Total: 152 Members</span>
+        </div>
+
+        <div class="filter-bar">
+            <input type="text" class="search-input" placeholder="Search by Name, ID or Email...">
+            <button class="btn-primary" style="width:auto;">Search</button>
+        </div>
+
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Name & ID</th>
+                        <th>Email</th>
+                        <th>Membership</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fas fa-user-circle" style="font-size:2rem; color:#ccc;"></i></td>
+                        <td>
+                            <strong>Rahim Uddin</strong><br>
+                            <small>ID: 19101010</small>
+                        </td>
+                        <td>rahim@uni.edu</td>
+                        <td><span style="color:#f39c12; font-weight:bold;">Gold Plan</span></td>
+                        <td><span class="status-badge status-confirmed">Active</span></td>
+                        <td><button style="border:1px solid #ddd; padding:5px 10px; cursor:pointer;">View History</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-user-circle" style="font-size:2rem; color:#ccc;"></i></td>
+                        <td>
+                            <strong>Tanaka Aki</strong><br>
+                            <small>ID: 19101012</small>
+                        </td>
+                        <td>tanaka@uni.edu</td>
+                        <td>Silver Plan</td>
+                        <td><span class="status-badge status-confirmed">Active</span></td>
+                        <td><button style="border:1px solid #ddd; padding:5px 10px; cursor:pointer;">View History</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-user-circle" style="font-size:2rem; color:#ccc;"></i></td>
+                        <td>
+                            <strong>John Doe</strong><br>
+                            <small>ID: 19101055</small>
+                        </td>
+                        <td>john@test.com</td>
+                        <td>Free Trial</td>
+                        <td><span class="status-badge" style="background:#e74c3c; color:white;">Expired</span></td>
+                        <td><button style="border:1px solid #ddd; padding:5px 10px; cursor:pointer;">View History</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Classes - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>.admin-nav { background-color: #2c3e50; color: white; } .admin-nav .nav-links a { color: #ecf0f1; }</style>
+</head>
+<body>
+
+    <nav class="navbar admin-nav">
+        <div class="logo">FitBook <span>Admin</span></div>
+        <ul class="nav-links">
+            <li><a href="admin_dashboard.html">Overview</a></li>
+            <li><a href="manage_classes.html" class="active">Manage Classes</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="reports.html">Reports</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout" style="border-color:white; color:white;">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h2 class="page-title">Class Management</h2>
+            <a href="create_class.html" class="btn-primary" style="width:auto; padding:10px 20px;">+ Add New Class</a>
+        </div>
+
+        <div class="filter-bar">
+            <input type="text" class="search-input" placeholder="Search by Class Name or Instructor...">
+            <select>
+                <option>All Instructors</option>
+                <option>Sarah Khan</option>
+                <option>Mike Ross</option>
+            </select>
+            <select>
+                <option>All Status</option>
+                <option>Active</option>
+                <option>Cancelled</option>
+            </select>
+            <button class="btn-primary" style="width:auto;">Filter</button>
+        </div>
+
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Instructor</th>
+                        <th>Date & Time</th>
+                        <th>Capacity</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Morning Yoga</strong></td>
+                        <td>Sarah Khan</td>
+                        <td>Today, 08:00 AM</td>
+                        <td><span style="color:green;">25</span> / 30</td>
+                        <td><span class="status-badge status-confirmed">Active</span></td>
+                        <td>
+                            <button style="color:blue; border:none; background:none; cursor:pointer;"><i class="fas fa-edit"></i> Edit</button>
+                            <button style="color:red; border:none; background:none; cursor:pointer; margin-left:10px;"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>HIIT Cardio</strong></td>
+                        <td>Mike Ross</td>
+                        <td>Today, 05:00 PM</td>
+                        <td><span style="color:red;">30</span> / 30</td>
+                        <td><span class="status-badge status-pending">Full</span></td>
+                        <td>
+                             <button style="color:blue; border:none; background:none; cursor:pointer;"><i class="fas fa-edit"></i> Edit</button>
+                            <button style="color:red; border:none; background:none; cursor:pointer; margin-left:10px;"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td><strong>Evening Pilates</strong></td>
+                        <td>Emily Blunt</td>
+                        <td>Tomorrow, 06:00 PM</td>
+                        <td>10 / 20</td>
+                        <td><span class="status-badge" style="background:#ddd; color:#333;">Cancelled</span></td>
+                        <td>
+                             <button style="color:blue; border:none; background:none; cursor:pointer;"><i class="fas fa-edit"></i> Edit</button>
+                            <button style="color:red; border:none; background:none; cursor:pointer; margin-left:10px;"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>s

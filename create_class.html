@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Class - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Admin Navbar styles override (Local) */
+        .admin-nav { background-color: #2c3e50; color: white; }
+        .admin-nav .nav-links a { color: #ecf0f1; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar admin-nav">
+        <div class="logo">FitBook <span>Admin</span></div>
+        <ul class="nav-links">
+            <li><a href="admin_dashboard.html">Overview</a></li>
+            <li><a href="#" class="active">Create Class</a></li>
+            <li><a href="#">Students</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout" style="border-color:white; color:white;">Logout</a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="page-header">
+            <h2 class="page-title">Create New Class</h2>
+            <a href="admin_dashboard.html" style="color:#666;"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+        </div>
+
+        <div class="form-container">
+            <form onsubmit="handleCreateClass(event)">
+                
+                <div class="form-group">
+                    <label>Class Name</label>
+                    <input type="text" placeholder="e.g. Advanced Pilates" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Instructor</label>
+                        <select required>
+                            <option value="">Select Instructor...</option>
+                            <option>Sarah Khan</option>
+                            <option>Mike Ross</option>
+                            <option>Emily Blunt</option>
+                            <option>New Instructor (+)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Room / Studio</label>
+                        <select>
+                            <option>Studio A</option>
+                            <option>Studio B</option>
+                            <option>Gym Floor</option>
+                            <option>Swimming Pool</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Start Time</label>
+                        <input type="time" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Max Capacity</label>
+                        <input type="number" placeholder="e.g. 30" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Duration (Minutes)</label>
+                        <input type="number" placeholder="e.g. 60" value="60">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Class Description (Optional)</label>
+                    <textarea rows="4" placeholder="Enter details about what students should bring or expect..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="window.location.href='admin_dashboard.html'">Cancel</button>
+                    <button type="submit" class="btn-primary" style="width: auto; padding: 12px 30px;">Publish Class</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        function handleCreateClass(e) {
+            e.preventDefault(); // Stop reload
+            
+            // Show success message
+            if(confirm("New class created successfully! \nClick OK to return to dashboard.")) {
+                window.location.href = "admin_dashboard.html";
+            }
+        }
+    </script>
+
+</body>
+</html>

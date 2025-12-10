@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Class - FitBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FitBook <span>Web</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="booking.html" class="active">Book Class</a></li>
+            <li><a href="pass.html">My Pass</a></li>
+        </ul>
+        <a href="index.html" class="btn-logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h2 class="page-title">Available Classes</h2>
+        </div>
+
+        <div class="class-grid">
+            <div class="class-card">
+                <div class="card-header">
+                    <span>Morning Yoga</span>
+                    <span style="background:rgba(0,0,0,0.2); padding:2px 8px; border-radius:4px; font-size:0.8rem;">5 Spots</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-info"><i class="far fa-clock"></i> 08:00 AM - Today</div>
+                    <div class="card-info"><i class="fas fa-user"></i> Instr. Sarah Khan</div>
+                    <div class="card-info"><i class="fas fa-map-marker-alt"></i> Studio A</div>
+                    <button class="btn-primary" onclick="bookClass('Morning Yoga')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="class-card">
+                <div class="card-header" style="background:#e67e22;">
+                    <span>HIIT Cardio</span>
+                    <span style="background:rgba(0,0,0,0.2); padding:2px 8px; border-radius:4px; font-size:0.8rem;">Filling Fast</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-info"><i class="far fa-clock"></i> 10:30 AM - Today</div>
+                    <div class="card-info"><i class="fas fa-user"></i> Instr. Mike Ross</div>
+                    <div class="card-info"><i class="fas fa-map-marker-alt"></i> Gym Floor</div>
+                    <button class="btn-primary" onclick="bookClass('HIIT Cardio')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="class-card" style="opacity: 0.8;">
+                <div class="card-header" style="background:#c0392b;">
+                    <span>Power Pilates</span>
+                    <span>FULL</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-info"><i class="far fa-clock"></i> 04:00 PM - Today</div>
+                    <div class="card-info"><i class="fas fa-user"></i> Instr. Emily</div>
+                    <button class="btn-primary btn-disabled">Join Waitlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function bookClass(className) {
+            if(confirm("Confirm booking for " + className + "?")) {
+                window.location.href = "pass.html";
+            }
+        }
+    </script>
+</body>
+</html>

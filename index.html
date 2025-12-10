@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FitBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-box">
+        <h1 class="logo" style="margin-bottom: 20px;">FitBook <span>Login</span></h1>
+        
+        <form onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" id="userEmail" placeholder="admin@fitbook.com or student@uni.edu" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••" required>
+            </div>
+            <button type="submit" class="btn-primary">Sign In</button>
+        </form>
+        
+        <div style="margin-top: 20px; font-size: 0.8rem; color: #666; text-align: left; background: #f1f1f1; padding: 10px; border-radius: 5px;">
+            <strong>Demo Credentials:</strong><br>
+            For Admin: <code>admin@fitbook.com</code><br>
+            For Student: <code>Any other email</code>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(e) {
+            e.preventDefault(); // পেজ রিলোড বন্ধ করবে
+            
+            // ইনপুট ফিল্ড থেকে ইমেইল নেওয়া
+            var email = document.getElementById('userEmail').value;
+
+            // লজিক চেক
+            if (email === "admin@fitbook.com") {
+                // এডমিন হলে এখানে যাবে
+                window.location.href = "admin_dashboard.html";
+            } else {
+                // স্টুডেন্ট হলে এখানে যাবে
+                window.location.href = "dashboard.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
